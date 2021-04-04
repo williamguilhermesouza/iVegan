@@ -1,4 +1,4 @@
-package tk.williamsouza.ivegan.fragments
+package tk.williamsouza.ivegan.fragments.HomeFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

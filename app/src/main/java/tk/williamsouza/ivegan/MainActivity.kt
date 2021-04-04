@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import tk.williamsouza.ivegan.fragments.HomeFragment
+import tk.williamsouza.ivegan.fragments.HomeFragment.HomeFragment
 import tk.williamsouza.ivegan.fragments.ProfileFragment
 import tk.williamsouza.ivegan.fragments.RequestsFragment
 import tk.williamsouza.ivegan.fragments.SearchFragment
