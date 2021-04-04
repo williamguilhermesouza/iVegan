@@ -6,4 +6,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="r_gen_pereira_da_silva_30">R. Gen. Pereira da Silva, 30</string>
     <string name="arrowdown">arrowDown</string>
+    <string name="ticket">ticket</string>
+    <string name="r_20_pra_restaurantes_selecionados">R$ 20 pra restaurantes selecionados</string>
+    <string name="v_lido_at_04_04">Válido até 04/04</string>
 </resources>
