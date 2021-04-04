@@ -82,7 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/couponCard">
 
             <LinearLayout
-                android:id="@+id/scrollableLayout"
+                android:id="@+id/bannersLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -128,6 +128,225 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bannersView" />
+
+        <HorizontalScrollView
+            android:id="@+id/categoriesView"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categories">
+
+            <LinearLayout
+                android:id="@+id/categoriesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/drinksCard"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/drinks"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/drinks" />
+
+                    <TextView
+                        android:id="@+id/drinksLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/bebidas" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pascoaCard"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/pascoaButton"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/drinks"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/pascoa" />
+
+                    <TextView
+                        android:id="@+id/pascoaLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/pascoa" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pharmCard"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/pharmButton"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/drinks"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/pharm" />
+
+                    <TextView
+                        android:id="@+id/pharmLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/farmacia" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/petCard"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/petButton"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/drinks"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/pet" />
+
+                    <TextView
+                        android:id="@+id/petLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/pet" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/convenienceCard"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/convenienceButton"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/drinks"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/convenience" />
+
+                    <TextView
+                        android:id="@+id/convenienceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/conveniencia" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/filtersView"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurants">
+
+            <LinearLayout
+                android:id="@+id/filtersLayout"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/FiltersButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/filtros"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/OrderByButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/ordenar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/freeButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/entrega_gr_tis"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/distanceButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/dist_ncia"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/deliverIveganButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/entrega_ivegan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <HorizontalScrollView
             android:id="@+id/lastRestaurantsView"
@@ -248,6 +467,32 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/categorias"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastRestaurantsView" />
+
+        <TextView
+            android:id="@+id/restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/restaurantes"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoriesView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

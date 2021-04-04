@@ -20,4 +20,17 @@
     <string name="bistro_vegano">Bistro Vegano</string>
     <string name="nikit_vegan">Nikit Vegan</string>
     <string name="nork_burger">Nork Burger</string>
+    <string name="categorias">Categorias</string>
+    <string name="drinks">drinks</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="pascoa">Páscoa</string>
+    <string name="farmacia">Farmácia</string>
+    <string name="pet">Pet</string>
+    <string name="conveniencia">Conveniência</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="filtros">Filtros</string>
+    <string name="ordenar">Ordenar</string>
+    <string name="entrega_gr_tis">Entrega grátis</string>
+    <string name="dist_ncia">Distância</string>
+    <string name="entrega_ivegan">Entrega iVegan</string>
 </resources>
