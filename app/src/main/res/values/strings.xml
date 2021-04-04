@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">iVegan</string>
+    <string name="entrega">Entrega</string>
+    <string name="retirada">Retirada</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="r_gen_pereira_da_silva_30">R. Gen. Pereira da Silva, 30</string>
+    <string name="arrowdown">arrowDown</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeButton"
+        android:title="Início"
+        android:icon="@drawable/ic_home_foreground"/>
+    <item
+        android:id="@+id/searchButton"
+        android:title="Busca"
+        android:icon="@drawable/ic_search_foreground"/>
+    <item
+        android:id="@+id/requestsButton"
+        android:title="Pedidos"
+        android:icon="@drawable/ic_request_foreground"/>
+    <item
+        android:id="@+id/profileButton"
+        android:title="Perfil"
+        android:icon="@drawable/ic_profile_foreground"/>
+</menu>
