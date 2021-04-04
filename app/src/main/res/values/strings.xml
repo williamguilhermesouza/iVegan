@@ -13,4 +13,11 @@
     <string name="banner1">banner1</string>
     <string name="banner2">banner2</string>
     <string name="banner3">banner3</string>
+    <string name="ultimos_restaurantes">Últimos restaurantes</string>
+    <string name="ver_mais">Ver mais</string>
+    <string name="veglotus">Veglotus</string>
+    <string name="restaurant_logo_1">restaurant-logo-1</string>
+    <string name="bistro_vegano">Bistro Vegano</string>
+    <string name="nikit_vegan">Nikit Vegan</string>
+    <string name="nork_burger">Nork Burger</string>
 </resources>
