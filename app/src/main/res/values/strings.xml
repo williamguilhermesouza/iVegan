@@ -33,4 +33,6 @@
     <string name="entrega_gr_tis">Entrega grátis</string>
     <string name="dist_ncia">Distância</string>
     <string name="entrega_ivegan">Entrega iVegan</string>
+    <string name="restaurantimage">restaurantImage</string>
+    <string name="star">star</string>
 </resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/restaurantCardView"
+    android:layout_width="380dp"
+    android:layout_height="100dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="10dp"
+    tools:layout_editor_absoluteX="200dp"
+    tools:layout_editor_absoluteY="79dp">
+
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/restaurantimage" />
+
+    <TextView
+        android:id="@+id/restaurantTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        tools:text="Nork Burger" />
+
+    <ImageView
+        android:id="@+id/restaurantStar"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/star"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/restaurantDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="38dp"
+        tools:text="4.7 - Lanches - 4.6 km" />
+
+    <TextView
+        android:id="@+id/restaurantTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="62dp"
+        tools:text="30 -40 min - Grátis" />
+</androidx.cardview.widget.CardView>
