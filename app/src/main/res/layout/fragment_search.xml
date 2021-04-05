@@ -1,6 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/searchLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SearchFragment"/>
+    tools:context=".fragments.SearchFragment">
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="302dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/light_gray"
+        android:ems="10"
+        android:hint="@string/item_ou_loja"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/light_gray"
+        android:contentDescription="@string/search_icon"
+        android:src="@drawable/search_icon"
+        app:layout_constraintEnd_toStartOf="@+id/searchBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/buscas_recentes"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBox" />
+
+    <Button
+        android:id="@+id/recentButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/vegano"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_time_more"
+        app:iconGravity="start"
+        app:iconTint="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentLabel" />
+
+    <Button
+        android:id="@+id/recentButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/vikings"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_time_more"
+        app:iconGravity="start"
+        app:iconTint="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentButton1" />
+
+    <Button
+        android:id="@+id/recentButton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/burguer_king"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_time_more"
+        app:iconGravity="start"
+        app:iconTint="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentButton2" />
+
+    <Button
+        android:id="@+id/recentButton4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/acai_beat"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_time_more"
+        app:iconGravity="start"
+        app:iconTint="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentButton3" />
+
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/categorias"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentButton4" />
+
+    <ScrollView
+        android:id="@+id/categoriesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryLabel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/marketView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/marketImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/market" />
+
+                <TextView
+                    android:id="@+id/marketTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mercado"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/promoView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="-60dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/promoImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/promo" />
+
+                <TextView
+                    android:id="@+id/promoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/promo_es"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/brazilView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/brazilImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/market" />
+
+                <TextView
+                    android:id="@+id/brazilTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mercado"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/healthView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="-60dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/healthImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/promo" />
+
+                <TextView
+                    android:id="@+id/healthTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/promo_es"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/marmitaView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/marmitaImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/market" />
+
+                <TextView
+                    android:id="@+id/marmitaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mercado"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/frozenView"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="-60dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageButton
+                    android:id="@+id/frozenImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/button_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/promo" />
+
+                <TextView
+                    android:id="@+id/frozenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/promo_es"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

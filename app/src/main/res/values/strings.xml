@@ -35,4 +35,15 @@
     <string name="entrega_ivegan">Entrega iVegan</string>
     <string name="restaurantimage">restaurantImage</string>
     <string name="star">star</string>
+    <string name="item_ou_loja">Item ou loja</string>
+    <string name="search_icon">search icon</string>
+    <string name="buscas_recentes">Buscas Recentes</string>
+    <string name="vegano">Vegano</string>
+    <string name="vikings">Vikings</string>
+    <string name="burguer_king">Burguer king</string>
+    <string name="acai_beat">Acai beat</string>
+    <string name="button_image">button image</string>
+    <string name="mercado">Mercado</string>
+    <string name="promo_es">Promoções</string>
+    <string name="pedidos">PEDIDOS</string>
 </resources>
