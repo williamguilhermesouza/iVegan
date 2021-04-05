@@ -1,14 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deliverView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment.WithdrawFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/couponCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ticketView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/ticket"
+                android:src="@mipmap/ic_ticket_foreground" />
+
+            <TextView
+                android:id="@+id/ticketTitle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/r_20_pra_restaurantes_selecionados"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ticketSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="49dp"
+                android:text="@string/v_lido_at_04_04" />
+
+            <ImageView
+                android:id="@+id/ticketArrowRight"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/restaurantes"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/couponCard" />
+
+        <HorizontalScrollView
+            android:id="@+id/filtersView"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurants">
+
+            <LinearLayout
+                android:id="@+id/filtersLayout"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/FiltersButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/filtros"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/OrderByButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/ordenar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/freeButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/entrega_gr_tis"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/distanceButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/dist_ncia"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/deliverIveganButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light_gray"
+                    android:text="@string/entrega_ivegan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/restaurantsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filtersView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
