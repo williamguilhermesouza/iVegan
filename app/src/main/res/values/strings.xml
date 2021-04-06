@@ -46,4 +46,9 @@
     <string name="mercado">Mercado</string>
     <string name="promo_es">Promoções</string>
     <string name="pedidos">PEDIDOS</string>
+    <string name="no_request">no request</string>
+    <string name="pedido_entregue">Pedido entregue -</string>
+    <string name="_6243">6243</string>
+    <string name="ajuda">Ajuda</string>
+    <string name="detalhes">Detalhes</string>
 </resources>
