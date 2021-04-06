@@ -1,6 +1,604 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ProfileFragment"/>
+    tools:context=".fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profilePicView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/profilepic"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/profileTitle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/william_guilherme"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/prifleSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/editar_perfil" />
+
+            <ImageView
+                android:id="@+id/profileArrowRight"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/couponCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ticketView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/gift"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_gift" />
+
+            <TextView
+                android:id="@+id/ticketTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/ganhe_r_10_indicanto_o_ivegan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ticketSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/convide_seus_amigos" />
+
+            <ImageView
+                android:id="@+id/ticketArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notificationCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/notificationView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_bell" />
+
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/notifica_es"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notificationSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/minha_central_de_notificacoes" />
+
+            <ImageView
+                android:id="@+id/notificationArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/walletCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/walletView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_wallet" />
+
+            <TextView
+                android:id="@+id/walletTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/carteira"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/walletSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/meu_saldo_e_qr_code" />
+
+            <ImageView
+                android:id="@+id/walletArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/couponsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/couponsView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_ticket" />
+
+            <TextView
+                android:id="@+id/couponsTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cupons"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/couponsSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/meus_cupons_de_desconto" />
+
+            <ImageView
+                android:id="@+id/couponsArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favoriteCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/favoriteView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_favorite" />
+
+            <TextView
+                android:id="@+id/favoriteTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/favoritos"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/favoriteSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/meus_locais_favoritos" />
+
+            <ImageView
+                android:id="@+id/favoriteArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/paymentnCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/paymentsView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_card" />
+
+            <TextView
+                android:id="@+id/paymentsTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/pagamento"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/paymentsSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/minhas_formas_de_pagamento" />
+
+            <ImageView
+                android:id="@+id/paymentsArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addressnCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/addressView"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_pin" />
+
+            <TextView
+                android:id="@+id/addressTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/endere_os"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressSubTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/meus_endere_os_de_entrega" />
+
+            <ImageView
+                android:id="@+id/addressArrowRight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/helpCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/helpView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_help" />
+
+            <TextView
+                android:id="@+id/helpTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ajuda"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/helpsArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/configurationCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/configurationView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_config" />
+
+            <TextView
+                android:id="@+id/configurationTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/configura_es"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/helpArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/securitynCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/securityView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_security" />
+
+            <TextView
+                android:id="@+id/securityTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/seguranca"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/securityArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/suggestCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/suggestView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_house" />
+
+            <TextView
+                android:id="@+id/suggestTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/sugerir_restaurantes"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/suggestArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/partnerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/partnerView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/bell"
+                android:src="@mipmap/ic_ticket_foreground"
+                app:srcCompat="@drawable/ic_party" />
+
+            <TextView
+                android:id="@+id/partnerTitle"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/seja_parceiro"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/partnerArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/arrowright"
+                android:src="@drawable/ic_arrow_right_foreground" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
